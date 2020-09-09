@@ -44,19 +44,6 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
-    <repositories>
-        <repository>
-            <id>nexus</id>
-            <name>Aliyun Nexus repository</name>
-            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
-        </repository>
-        <repository>
-            <id>local</id>
-            <name>Nexus repository</name>
-            <url>http://localhost:8077/nexus/content/groups/public/</url>
-        </repository>
-    </repositories>
-
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
