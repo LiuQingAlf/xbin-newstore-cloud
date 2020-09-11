@@ -10,10 +10,12 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.netflix.feign.EnableFeignClients;
 import org.springframework.cloud.netflix.hystrix.EnableHystrix;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-
+import org.springframework.context.annotation.FilterType;
 
 @SpringBootApplication(exclude={DataSourceAutoConfiguration.class,HibernateJpaAutoConfiguration.class})
+@ComponentScan(basePackages = { "cn.binux" }, excludeFilters = @ComponentScan.Filter(type = FilterType.ASPECTJ, pattern = "cn.binux.druid.*"))
 @EnableEurekaClient
 @EnableFeignClients
 @EnableHystrix
@@ -30,3 +32,4 @@ public class XbinStoreWebPortalApplication {
 		return new JedisClientSingle();
 	}
 }
+
